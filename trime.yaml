@@ -41,7 +41,7 @@ style:
   latin_locale: en_US #西文语言
   locale: zh_CN #缺省语言 zh_TW,zh_CN,zh_HK,""
   keyboard_height: 330 #锁定键盘高度，避免切换时键盘高度变化而造成闪烁
-  keyboard_height_land: 80 #锁定横屏下键盘高度，避免切换时键盘高度变化而造成闪烁
+  keyboard_height_land: 160 #锁定横屏下键盘高度，避免切换时键盘高度变化而造成闪烁
   preview_font: latin.ttf #按键提示字体
   preview_height: 56 #按键提示高度
   preview_offset: -32 #按键提示纵向偏移
@@ -3213,8 +3213,8 @@ liquid_keyboard:
   author: "tumuyan"
   row: 6              #每屏最多显示多少行按键
   row_land: 5         #横屏每屏最多显示多少行按键
-  key_height: 10      #按键高度
-  key_height_land: 10 #横屏模式按键高度
+  key_height: 40      #按键高度
+  key_height_land: 40 #横屏模式按键高度
   single_width: 60    #single类型的按键宽度
   vertical_gap: 8     #纵向按键间隙
   margin_x: 2       #左右按键间隙的1/2
@@ -3366,7 +3366,7 @@ preset_keys:
   .number: {label: 123, send: Eisu_toggle, select: .number} #默认的9宫格数据键盘
   DefaultKeyboard: {label: 五笔, send: Eisu_toggle, select: default}
   DefaultKeyboard2: {label: 中, send: Eisu_toggle, select: default}
-  Hide: {label: , send: BACK}   # 收起键盘
+  Hide: {send: BACK}   # 收起键盘
 
   # 编辑
   Return: {label: Enter, preview: '↩', send: Return}
@@ -3386,7 +3386,7 @@ preset_keys:
   liquid_keyboard_emoji: { label: 🙂, send: function, command: liquid_keyboard, option: "emoji" }
   liquid_keyboard_clipboard: { label: ⏍, send: function, command: liquid_keyboard, option: "剪贴" }
 
-  # 虚拟行第6行设置
+  # 虚拟第6行设置
   IME_switch: {label: '⌨', functional: false, send: LANGUAGE_SWITCH}
 
   # 快捷键
