@@ -58,7 +58,7 @@ style:
   vertical_correction: -5
   key_height: *jpgd2 #键高
   # 引用的键盘
-  keyboards: [default, number, symbols, .symbols, english, english2, .number, symbols01, symbols02, symbols11, symbols12, symbols13, symbols14, symbols21, symbols22, symbols31, symbols32, symbols33, symbols34, symbols35, symbols36, symbols41, symbols42, symbols43, symbols44, symbols51, symbols52, symbols53, symbols54, symbols55, symbols56, symbols61, symbols62, symbols63, symbols64, symbols65, symbols71, symbols72, symbols73, symbols74, symbols75, symbols81, symbols82, symbols83, symbols91, symbols92, symbols93, symbolsA1, symbolsA2, symbolsA3, symbolsA4, symbolsA5, symbolsB1, symbolsB2, symbolsB3, symbolsC1, symbolsC2, symbolsC3, symbolsC4, symbolsC5, symbolsD1, symbolsD2] #键盘配置,所有跳转键盘都需要在这里配置，不然会出错
+  keyboards: [default, number, symbols, .symbols, english, , .number, symbols01, symbols02, symbols11, symbols12, symbols13, symbols14, symbols21, symbols22, symbols31, symbols32, symbols33, symbols34, symbols35, symbols36, symbols41, symbols42, symbols43, symbols44, symbols51, symbols52, symbols53, symbols54, symbols55, symbols56, symbols61, symbols62, symbols63, symbols64, symbols65, symbols71, symbols72, symbols73, symbols74, symbols75, symbols81, symbols82, symbols83, symbols91, symbols92, symbols93, symbolsA1, symbolsA2, symbolsA3, symbolsA4, symbolsA5, symbolsB1, symbolsB2, symbolsB3, symbolsC1, symbolsC2, symbolsC3, symbolsC4, symbolsC5, symbolsD1, symbolsD2] #键盘配置,所有跳转键盘都需要在这里配置，不然会出错
 
 fallback_colors:
   candidate_text_color: text_color
@@ -287,7 +287,7 @@ preset_keyboards:
       - {click: "'", long_click: "“”"}  
       - {width: 4.4}
       # 第四行
-      - {click: english2, width: 10, key_back_color: gnj, key_text_color: gnz}
+      - {click: Mode_switch, width: 10, key_back_color: gnj, key_text_color: gnz}
       - {click: z, label: "Z"}
       - {click: x, label: "X", long_click: "cut"}
       - {click: c, label: "C", long_click: "copy"}
@@ -3360,13 +3360,13 @@ preset_keys:
   Shift: {label: "↑", send: Shift_L}
   number: {label: 123, send: Eisu_toggle, select: number}
   english: {label: "abc", send: Eisu_toggle, select: english}
-  english2: {label: "En", send: Eisu_toggle, select: english2}
   symbols: {label: "符", send: Eisu_toggle, select: symbols}
   .symbols: {label: "更多", send: Eisu_toggle, select: .symbols} #默认的符号键盘
   .number: {label: 123, send: Eisu_toggle, select: .number} #默认的9宫格数据键盘
   DefaultKeyboard: {label: 五笔, send: Eisu_toggle, select: default}
   DefaultKeyboard2: {label: 中, send: Eisu_toggle, select: default}
   Hide: {send: BACK}   # 收起键盘
+  Mode_switch: {toggle: ascii_mode, functional: false, send: Mode_switch, states: [ En, 中 ]}
 
   # 编辑
   Return: {label: Enter, preview: '↩', send: Return}
